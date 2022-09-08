@@ -1,6 +1,6 @@
 // run this file from the console with "node index.js"
 
-function changeState(state, action) {
+function reducer(state, action) {
   switch (action.type) {
     case "counter/increment":
       return { count: state.count + 1 };
@@ -15,10 +15,10 @@ let state = { count: 0 };
 
 console.log(state);
 
-state = changeState(state, { type: "counter/increment" });
+state = reducer(state, { type: "counter/increment" });
 
 console.log(state);
 
-state = changeState(state, { type: "counter/decrement" });
+state = reducer(state, { type: "counter/decrement" });
 
 console.log(state);
